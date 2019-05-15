@@ -1,0 +1,14 @@
+<button class="btn btn-primary" (click)="openDetails(); addClickCach()">Displas Details</button>
+<p *ngIf="isOpenDetals" class="details alert alert-success" role="alert">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, ut?
+</p>
+
+<ul class="list-group">
+  <ng-container *ngFor="let click of clickCach; let i = index">
+    <li
+      [ngClass]="{'white': i > 4}"
+      class="list-group-item"
+      [ngStyle]="{'background': i > 4 ? 'lightblue' : null}"
+    >{{click}} - {{i}}</li>
+  </ng-container>
+</ul>

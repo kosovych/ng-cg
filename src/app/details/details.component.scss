@@ -1,0 +1,17 @@
+.details {
+  animation: showDetails 0.3s forwards;
+  opacity: 0;
+}
+
+.white {
+  color: white;
+}
+
+@keyframes showDetails {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
