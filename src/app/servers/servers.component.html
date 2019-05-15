@@ -19,6 +19,9 @@
   Click
 </button>
 
-<p>{{ serverCreatedStatus }}</p>
+<p *ngIf="isServerCreated; else mark">{{ serverCreatedStatus }}</p>
+<ng-template #mark>
+  <p>No server Was Created</p>
+</ng-template>
 <app-server></app-server>
 <app-server></app-server>
