@@ -8,11 +8,21 @@ import { Recipe } from '../recipe.model';
 })
 export class RecipteListComponent implements OnInit {
   recipes: Recipe[] = [
-    new Recipe('Chicken', 'Some tasty chicken', 'https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2017/04/one-pot-poached-chicken.jpg?itok=R3NMZk-d')
+    new Recipe(
+      'Chicken',
+      'Some tasty chicken',
+      'https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2017/04/one-pot-poached-chicken.jpg?itok=R3NMZk-d',
+      ),
+      new Recipe(
+        'Chicken',
+        'Some tasty chicken',
+        'https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2017/04/one-pot-poached-chicken.jpg?itok=R3NMZk-d',
+        ),
   ]
   constructor() {}
 
   ngOnInit() {
+    console.log(this.recipes);
   }
 
 }
