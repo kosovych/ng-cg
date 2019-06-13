@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ng-cg';
+
+  numbers = [];
+
+  GameRunHundler(event) {
+    console.log('GameRunHundler ->', event);
+    this.numbers.push(event);
+  }
 }
