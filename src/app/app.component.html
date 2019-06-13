@@ -4,12 +4,24 @@
     (blueprintCreated)="onBlueprintAdded($event)"
   ></app-cockpit>
   <hr>
+  <button
+    class="btn btn-primary"
+    (click)="onChangedFirst()"
+  >Change</button>
+  <button
+  class="btn btn-danger"
+  (click)="onDesrFirst()"
+>Change</button>
   <div class="row">
     <div class="col-xs-12">
       <app-server-element
+        
         *ngFor="let serverElement of serverElements"
         [srvElement]="serverElement"
-      ></app-server-element>
+        [name]="serverElement.name"
+      >
+      <p #paragraph>Some Test</p>
+    </app-server-element>
     </div>
   </div>
 </div>
