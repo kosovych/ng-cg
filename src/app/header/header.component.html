@@ -4,10 +4,10 @@
       <a href="#" class="navbar-brand">Repipe book</a>
     </div>
 
-    <div class="collapse navbar-default">
+    <div class="navbar-default">
       <ul class="nav navbar-nav">
-        <li><a href="#">Recipes</a></li>
-        <li><a href="#">Shoping List</a></li>
+        <li><a href="#" (click)="route($event, '/recipes')">Recipes</a></li>
+        <li><a href="#" (click)="route($event, '/shoping-list')">Shoping List</a></li>
       </ul>
       
       <ul class="nav navbar-nav navbar-right">

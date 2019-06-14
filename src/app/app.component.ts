@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ng-cg';
+  route = '/recipes'
+
+  changeRoute(route) {
+    console.log(route);
+    this.route = route;
+  }
 }

@@ -17,4 +17,9 @@ export class ShopingSistComponent implements OnInit {
   ngOnInit() {
   }
 
+  addIngridient(ingridient) {
+    
+    this.ingridients.push( new Ingridient(ingridient.name, ingridient.amount) )
+  }
+
 }

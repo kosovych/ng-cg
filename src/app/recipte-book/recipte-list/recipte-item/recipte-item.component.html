@@ -1,11 +1,9 @@
-<!-- <div class="row">
-  <div class="col-xs-12">
-    <button class="btn btn-success">New Recipe</button>
+<a href="#" class="list-group-item  clearfix">
+  <div class="pull-left">
+    <h3 class="list-group-item-heading">{{ recipe.name }}</h3>
+    <p class="list-group-item-text">{{ recipe.description }}</p>
   </div>
-</div>
-
-<div class="row">
-  <div class="col-xs-12">
-    <app-recipte-item></app-recipte-item>
-  </div>
-</div> -->
+  <span class="pull-right">
+    <img class="img-responsive" [src]="recipe.imagePath" alt="" style="max-height: 50px;">
+  </span>
+</a>
