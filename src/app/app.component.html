@@ -21,6 +21,20 @@
 
   <p basicHighlight>TEST</p>
   <p appBassicHightlight2 [defaultColor]='"yellow"' [hightlightColor]='"grey"'>TEST2</p>
+
+  <p *appUnless='false'>
+    test custom structure directive -> false
+  </p>
+
+  <p *appUnless="true">
+    test custom structure directive -> true
+  </p>
+
+  <div [ngSwitch]="value">
+    <p *ngSwitchCase="5">value is 5</p>
+    <p *ngSwitchCase="10">value is 10</p>
+    <p *ngSwitchCase="15">value is 15</p>
+  </div>
   
 </div>
 
