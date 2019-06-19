@@ -11,6 +11,7 @@ import { RecipteItemComponent } from './recipte-book/recipte-list/recipte-item/r
 import { RecipteDetailsComponent } from './recipte-book/recipte-details/recipte-details.component';
 import { ShopingSistComponent } from './shoping-list/shoping-list.component';
 import { FormsModule } from '@angular/forms';
+import { DropdownDirective } from './shared/dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { FormsModule } from '@angular/forms';
     RecipteListComponent,
     RecipteDetailsComponent,
     ShopingSistComponent,
+    DropdownDirective,
   ],
   imports: [
     BrowserModule,
