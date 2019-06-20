@@ -4,19 +4,28 @@ import { UserService } from './user.service';
 @Injectable({
   providedIn: 'root'
 })
-export class CounerService implements OnInit {
-  counter: number = 0;
+export class CounerService {
+  counterActive: number = 0;
+  counterInActive: number = 0;
 
   constructor(
     private userService: UserService
   ) {
-    
-  }
+    this.userService.statusChanged.subscribe( (val) => {
+      switch (val) {
+        case 'toInactive':
+          this.counterInActive++;
+          console.log(val, this.counterInActive);
+          break;
 
-  ngOnInit() {
-    this.userService.statusChanged.subscribe( () => {
-      this.counter++;
-      console.log(this.counter);
+          case 'toActive':
+          this.counterActive++
+          console.log(val, this.counterActive);
+          break;
+      
+        default:
+          break;
+      }
     })
   }
 }

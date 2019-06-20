@@ -14,6 +14,5 @@ export class AppComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.counter = this.counerService.counter;
   }
 }
