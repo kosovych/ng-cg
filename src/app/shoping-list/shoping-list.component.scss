@@ -1,0 +1,12 @@
+.list-group-item {
+  animation: showBG 0.3s forwards;
+}
+
+@keyframes showBG {
+  from {
+    background-color: yellow;
+  }
+  to {
+    background-color: transparent;
+  }
+}
