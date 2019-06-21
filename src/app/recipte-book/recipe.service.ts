@@ -5,6 +5,7 @@ import {
 import {
   Recipe
 } from './recipe.model';
+import { Ingridient } from '../shared/ingridient.model';
 
 @Injectable({
   providedIn: 'root'
@@ -17,30 +18,18 @@ export class RecipeService {
       'Some tasty chicken',
       'https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2017/04/one-pot-poached-chicken.jpg?itok=R3NMZk-d',
       [
-        {
-          name: 'chicken',
-          amount: 1,
-        },
-        {
-          name: 'lemon',
-          amount: 0.5,
-        },
+        new Ingridient('chicken', 1),
+        new Ingridient('lemon', .5),
     ],
     ),
     new Recipe(
       'Chicken 2',
       'Some tasty chicken 2',
       'https://www.bbcgoodfood.com/sites/default/files/styles/recipe/public/recipe/recipe-image/2017/04/one-pot-poached-chicken.jpg?itok=R3NMZk-d',
-      [
-        {
-          name: 'chicken',
-          amount: 2,
-        },
-        {
-          name: 'lemon',
-          amount: 1,
-        },
-    ],
+        [
+          new Ingridient('chicken', 2),
+          new Ingridient('lemon', 1),
+      ],
     ),
   ]
 

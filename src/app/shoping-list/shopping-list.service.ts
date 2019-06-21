@@ -21,4 +21,10 @@ export class ShoppingListService {
     this.ingridient.push(new Ingridient(name, count));
     this.ingridientChanged.emit(this.getIngridients());
   }
+
+  addIngridients(ingridients: Ingridient[]) {
+    this.ingridient.push(...ingridients);
+    this.ingridientChanged.emit(this.getIngridients());
+    console.log(this.ingridient);
+  }
 }

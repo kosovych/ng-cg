@@ -26,5 +26,4 @@ export class ShopingSistComponent implements OnInit {
   addIngridient(ingridient) {
     this.shoppingListService.addIngridient(ingridient.name, ingridient.amount);
   }
-
 }
