@@ -12,7 +12,7 @@ export class UserComponent implements OnInit, OnDestroy {
   paramsSubs: Subscription;
 
   constructor(
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
   ) { }
 
   ngOnInit() {
