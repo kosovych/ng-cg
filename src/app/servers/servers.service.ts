@@ -1,3 +1,5 @@
+import { Server } from "./server/server.resolver";
+
 export class ServersService {
   private servers = [
     {
@@ -21,7 +23,7 @@ export class ServersService {
     return this.servers;
   }
 
-  getServer(id: number) {
+  getServer(id: number): Server {
     const server = this.servers.find(
       (s) => {
         return s.id === id;
