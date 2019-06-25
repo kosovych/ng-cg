@@ -1,18 +1,18 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a href="#" class="navbar-brand">Repipe book</a>
+      <a  routerLink="/" class="navbar-brand">Repipe book</a>
     </div>
 
     <div class="navbar-default">
       <ul class="nav navbar-nav">
-        <li><a routerLink="/recipes" (click)="route($event, '/recipes')">Recipes</a></li>
-        <li><a routerLink="/shoping-list" (click)="route($event, '/shoping-list')">Shoping List</a></li>
+        <li routerLinkActive="active"><a routerLink="/recipes" (click)="route($event, '/recipes')">Recipes</a></li>
+        <li routerLinkActive="active"><a routerLink="/shoping-list" (click)="route($event, '/shoping-list')">Shoping List</a></li>
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown" appDropdown>
-          <a href="#" class="dropdown-toogle">Manage <span class="caret"></span></a>
+          <a  class="dropdown-toogle">Manage <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#">Save Data</a></li>
             <li><a href="#">Fetch Data</a></li>

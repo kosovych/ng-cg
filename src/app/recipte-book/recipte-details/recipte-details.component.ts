@@ -19,8 +19,6 @@ export class RecipteDetailsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.recipe = this.recipeService.getRecipeById(+this.route.snapshot.params['id']);
-
     this.route.params.subscribe(
       (params) => {
         this.recipe = this.recipeService.getRecipeById(+params['id'])

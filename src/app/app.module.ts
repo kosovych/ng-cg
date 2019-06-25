@@ -13,6 +13,8 @@ import { ShopingSistComponent } from './shoping-list/shoping-list.component';
 import { FormsModule } from '@angular/forms';
 import { DropdownDirective } from './shared/dropdown.directive';
 import { ShoppingListService } from './shoping-list/shopping-list.service';
+import { RecipeStartComponent } from './recipte-book/recipe-start/recipe-start.component';
+import { RecipeEditComponent } from './recipte-book/recipe-edit/recipe-edit.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { ShoppingListService } from './shoping-list/shopping-list.service';
     RecipteDetailsComponent,
     ShopingSistComponent,
     DropdownDirective,
+    RecipeStartComponent,
+    RecipeEditComponent,
   ],
   imports: [
     BrowserModule,
