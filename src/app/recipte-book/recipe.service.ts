@@ -6,12 +6,13 @@ import {
   Recipe
 } from './recipe.model';
 import { Ingridient } from '../shared/ingridient.model';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RecipeService {
-  recipeSelected = new EventEmitter < Recipe > ();
+  recipeSelected = new Subject < Recipe > ();
   private recipes: Recipe[] = [
     new Recipe(
       1,

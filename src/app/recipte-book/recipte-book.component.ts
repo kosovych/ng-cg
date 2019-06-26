@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { Recipe } from './recipe.model';
 import { RecipeService } from './recipe.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'recipte-book',
@@ -9,13 +10,19 @@ import { RecipeService } from './recipe.service';
   providers: [RecipeService],
 })
 
-export class RecipteBookComponent {
+export class RecipteBookComponent implements OnDestroy {
   selectedRecipe: Recipe;
+  private sub: Subscription;
+
   constructor(
     private recipeService: RecipeService,
   ) {
-    this.recipeService.recipeSelected.subscribe( recipe => {
+    this.sub = this.recipeService.recipeSelected.subscribe( recipe => {
       this.selectedRecipe = recipe;
     } )
+  }
+
+  ngOnDestroy() {
+    this.sub.unsubscribe();
   }
 }
