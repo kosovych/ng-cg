@@ -8,6 +8,8 @@ import { NgForm } from '@angular/forms';
 })
 export class AppComponent {
   @ViewChild('f', {static: true}) form: NgForm;
+  defaultValue = 'pet';
+  answer = '';
   suggestUserName() {
     const suggestedName = 'Superuser';
   }
