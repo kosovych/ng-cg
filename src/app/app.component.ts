@@ -1,10 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ng-cg';
+  submited = false;
+
+  submit(form: NgForm) {
+    this.submited = true;
+    console.log(form);
+  }
+
+  defVal = 'Advanced';
+
 }
